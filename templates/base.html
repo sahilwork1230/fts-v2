@@ -8,13 +8,16 @@
     <title>FTS</title>
 </head>
 <body>
-    <header>
-
-    </header>
-
     {% block content %}
-    
     {% endblock %}
-    <footer></footer>
+
+
+
+
+
+
+    
+    {% load django_browser_reload %}
+    {% django_browser_reload_script %}
 </body>
 </html>
