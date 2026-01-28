@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<section class="min-h-screen bg-gradient-to-r from-black to-indigo-950">
-<div class="max-w-[1400px] border border-red-400 p-4 mx-auto">
-<h1>
-    Voices Driving Change
+<section class="min-h-screen ">
+<div class="max-w-[1400px] p-10 mx-auto">
+<h1 class="text-3xl sm:text-4xl lg:text-7xl bg-gradient-to-r from-indigo-800 to-pink-600 uppercase bg-clip-text text-transparent max-w-[500px]">
+    Featured Sponsor Circle
 </h1>
+<h2 class="mt-5 md:mt-10 text-xl sm:text-3xl md:text-5xl uppercase">
+    Supporting Partners
+</h2>
+
+<div class="mt-10 sm:pl-20 sm:pt-5 grid border grid-cols-1 sm:grid-cols-2 md:grid-cols-4 sm:gap-5">
+    {% for image in images %}
+        <div class="h-[200px] w-[200px] flex items-center justify-center mx-auto">
+            <img class="w-[190px] shadow-lg border md:grayscale hover:grayscale-0 transition-all duration-300" src="{% static 'sponsors/'|add:image %}" alt="">
+            <!-- <img class="w-[190px] absolute top-[0px] left-0 z-10 hover:opacity-0" src="{% static 'sponsors/'|add:image %}" alt=""> -->
+        </div>
+    {% endfor %}
+</div>
+
 </div>
 </section>
 {% endblock %}
