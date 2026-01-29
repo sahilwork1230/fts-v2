@@ -5,3 +5,5 @@ images = ["ainfinite.avif", "amity.avif", "carbon-light.avif", "iffaad.avif", "i
 # images = [
 #     f"static/sponsors/{image}" for image in image_list
 # ]
+
+partners = ["partner1.avif", "partner2.avif", "partner3.avif"]

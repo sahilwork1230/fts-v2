@@ -2,24 +2,85 @@
 {% load static %}
 
 {% block content %}
-<section class="min-h-screen ">
-<div class="max-w-[1400px] p-10 mx-auto">
-<h1 class="text-3xl sm:text-4xl lg:text-7xl bg-gradient-to-r from-indigo-800 to-pink-600 uppercase bg-clip-text text-transparent max-w-[500px]">
-    Featured Sponsor Circle
-</h1>
-<h2 class="mt-5 md:mt-10 text-xl sm:text-3xl md:text-5xl uppercase">
-    Supporting Partners
-</h2>
+<section class="min-h-screen">
+    <div class="max-w-[1400px] p-10 mx-auto">
+        <h1
+            class="text-3xl sm:text-4xl lg:text-8xl bg-gradient-to-r from-indigo-800 to-pink-600 uppercase bg-clip-text text-transparent max-w-[580px]">
+            Featured Sponsor Circle
+        </h1>
+        <h2 class="mt-5 md:mt-10 text-xl sm:text-3xl md:text-5xl uppercase">
+            Supporting Partners
+        </h2>
 
-<div class="mt-10 sm:pl-20 sm:pt-5 grid border grid-cols-1 sm:grid-cols-2 md:grid-cols-4 sm:gap-5">
-    {% for image in images %}
-        <div class="h-[200px] w-[200px] flex items-center justify-center mx-auto">
-            <img class="w-[190px] shadow-lg border md:grayscale hover:grayscale-0 transition-all duration-300" src="{% static 'sponsors/'|add:image %}" alt="">
-            <!-- <img class="w-[190px] absolute top-[0px] left-0 z-10 hover:opacity-0" src="{% static 'sponsors/'|add:image %}" alt=""> -->
+        <div
+            class="mt-[160px] sm:pl-20 sm:pt-5 grid border grid-cols-1 sm:grid-cols-2 md:grid-cols-4 sm:gap-5 relative sponsor-section">
+            <div class="floating-object">
+                <img src="{% static 'icons/flower.png' %}" alt="">
+            </div>
+            {% for image in images %}
+            <div class="h-[200px] w-[200px] flex items-center justify-center mx-auto card">
+                <img class="w-[190px] shadow-lg border md:grayscale hover:grayscale-0 transition-all duration-300"
+                    src="{% static 'sponsors/'|add:image %}" alt="">
+                <!-- <img class="w-[190px] absolute top-[0px] left-0 z-10 hover:opacity-0" src="{% static 'sponsors/'|add:image %}" alt=""> -->
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+
+    </div>
+</section>
+<section class="min-h-screen bg-gradient-to-r from-black to-indigo-950">
+    <div class="max-w-[1400px] p-10 mx-auto">
+<div class="main">
+  <div class="logo-outer bg-gradient-to-t from-indigo-500 via-yellow-600 to-purple-700">    
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150">
+      <style>
+        .logo-text { 
+          font-family: 'Jockey One', sans-serif; 
+          font-weight: 800; 
+          font-size: 140px; 
+          text-transform: uppercase; 
+          letter-spacing: 5px; 
+          fill: #0e100f; 
+        }
+      </style>
+      
+      <text 
+        x="50%" 
+        y="50%" 
+        text-anchor="middle" 
+        dominant-baseline="middle" 
+        class="logo-text">
+        MEDIA PARTNERS
+      </text>
+    </svg>    
+  </div>  
 </div>
 
-</div>
+        <div
+            class="mt-[120px] max-w-[800px] mx-auto pt-5 grid border grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 relative sponsor-section bg-white">
+            <div class="floating-object">
+                <img src="{% static 'icons/flower.png' %}" alt="">
+            </div>
+            {% for partner in partners %}
+            <div class="h-[200px] w-[200px] flex items-center justify-center mx-auto card">
+                <img class="w-[190px] shadow-lg border md:grayscale hover:grayscale-0 transition-all duration-300"
+                    src="{% static 'partners/'|add:partner %}" alt="">
+                <!-- <img class="w-[190px] absolute top-[0px] left-0 z-10 hover:opacity-0" src="{% static 'sponsors/'|add:partner %}" alt=""> -->
+            </div>
+            {% endfor %}
+        </div>
+
+</section>
+<section class="w-full bg-gradient-to-r from-indigo-800 via-indigo-900 to-purple-700 text-white">
+    <div>
+        
+    </div>
+    <h1 class="text-xl uppercase sm:text-2xl md:text-4xl lg:text-8xl text-center">
+        Become a <span class="sponsor">s</span>ponsor
+    </h1>
+    <p>
+        The Future Tech Summit provides exclusive, customized sponsorship opportunities tailored to your organization's objectives and budget. As a sponsor, you will benefit from enhanced brand visibility, direct engagement with industry leaders, and valuable networking opportunities with potential clients before, during, and after the event. Sponsorship enables you to position your company as an industry leader, showcase your expertise, and gain strategic exposure through high-impact branding, thought leadership sessions, and exclusive partnership benefits. Align with the Future Tech Summit to maximize your reach, strengthen your market presence, and be at the forefront of innovation and technological advancements.
+    </p>
+
 </section>
 {% endblock %}
