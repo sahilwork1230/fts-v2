@@ -18,8 +18,8 @@
 
 
 
-.logo-outer {
-  width: 1200px;
+.logo-outer1 {
+  max-width: 1200px;
   height: 200px;
   /* background: radial-gradient(89.08% 84.62% at 16.54% 78.46%,#fbfefa 0%,#c9f6b4 39.58%,#abff84 77.6%,#2fee65 100%); */
   border-radius: 3rem;
@@ -37,4 +37,29 @@ svg.logo {
   display: inline-block;
   transform-style: preserve-3d;
 }
+
+
+/* final effect */
+
+.reveal-section {
+  position: relative;
+  padding: 120px 0;
+}
+
+/* hidden by default */
+.reveal-text {
+  color: #eaffea;
+  line-height: 1.6;
+
+  -webkit-mask-image: radial-gradient(circle at center, #000 0%, transparent 65%);
+  -webkit-mask-size: 0% 0%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  mask-image: radial-gradient(circle at center, #000 0%, transparent 65%);
+  mask-size: 0% 0%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
 

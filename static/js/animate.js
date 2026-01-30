@@ -93,3 +93,40 @@ if (sponsorLetter) {
   });
 }
 
+// text animation
+const txt_animate = document.querySelector("#txt-animate")
+
+// gsap.to(txt_animate, {
+//   x:250,
+//   repeat:-1,
+//   yoyo: true,
+//   duration: 2,
+// })
+
+gsap.from(txt_animate, {
+  x:-100,
+  repeat: -1,
+  yoyo: true,
+  duration: 1,
+  ease: "power5.out"
+})
+
+
+// final animation
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".reveal-text", {
+  maskSize: "300% 300%",
+  webkitMaskSize: "300% 300%",
+  ease: "expo.out",
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: ".reveal-section",
+    start: "center center",   // 🔥 exact requirement
+    toggleActions: "play none none none",
+    once: true                // reveal only once
+  }
+});
+
+
+
