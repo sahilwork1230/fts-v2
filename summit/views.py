@@ -7,4 +7,4 @@ def sponsors(request):
     return render(request, "sponsors.html", {"images": images, "partners":partners})
 
 def speakers(request):
-    pass
+    return render(request, "speakers.html")

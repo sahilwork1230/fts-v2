@@ -41,25 +41,6 @@ svg.logo {
 
 /* final effect */
 
-.reveal-section {
-  position: relative;
-  padding: 120px 0;
-}
 
-/* hidden by default */
-.reveal-text {
-  color: #eaffea;
-  line-height: 1.6;
-
-  -webkit-mask-image: radial-gradient(circle at center, #000 0%, transparent 65%);
-  -webkit-mask-size: 0% 0%;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-
-  mask-image: radial-gradient(circle at center, #000 0%, transparent 65%);
-  mask-size: 0% 0%;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
 
 

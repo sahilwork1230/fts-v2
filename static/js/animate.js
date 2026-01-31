@@ -113,20 +113,7 @@ gsap.from(txt_animate, {
 
 
 // final animation
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".reveal-text", {
-  maskSize: "300% 300%",
-  webkitMaskSize: "300% 300%",
-  ease: "expo.out",
-  duration: 1.2,
-  scrollTrigger: {
-    trigger: ".reveal-section",
-    start: "center center",   // 🔥 exact requirement
-    toggleActions: "play none none none",
-    once: true                // reveal only once
-  }
-});
 
 
 
