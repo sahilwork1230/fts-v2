@@ -1,0 +1,63 @@
+  
+        .gradient-text {
+            background: linear-gradient(135deg, #ff1b6b 0%, #a855f7 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-glow {
+            position: relative;
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            transform: translateY(-4px);
+            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 20px 60px rgba(168, 85, 247, 0.2);
+        }
+        .input-field {
+            background: rgba(30, 30, 45, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #a855f7;
+            box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+        }
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ff1b6b 0%, #a855f7 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 27, 107, 0.4);
+        }
+        .check-icon {
+            color: #a855f7;
+        }
+        .pricing-card {
+            background: rgba(20, 20, 30, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .pricing-card:hover {
+            border-color: rgba(168, 85, 247, 0.5);
+            transform: translateY(-2px);
+        }
+        .pricing-card.selected {
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.1);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+        }
+        .hero-title {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 900;
+        }
